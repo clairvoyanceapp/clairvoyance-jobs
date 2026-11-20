@@ -1,0 +1,10 @@
+{
+  "id": "second-brain",
+  "version": 2,
+  "name": "Second Brain",
+  "workflow": "second-brain",
+  "icon": "brain",
+  "description": "Compile your existing Clairvoyance notes into a persistent, AI-maintained wiki.",
+  "briefPlaceholder": "Optional focus, new sources to prioritize, or questions to investigate…",
+  "promptScaffold": "Maintain a compounding Second Brain from the user's Clairvoyance Notes using the LLM Wiki pattern. Treat existing notes as immutable raw sources and continuously integrate durable knowledge into a separate generated wiki inside the Notes vault. Respect configured privacy exclusions, preserve provenance, maintain indexes and cross-links, surface contradictions, and keep repeated runs convergent."
+}

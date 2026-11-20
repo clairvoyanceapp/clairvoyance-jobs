@@ -1,0 +1,39 @@
+{
+  "id": "dashboard",
+  "version": 2,
+  "name": "Dashboard",
+  "icon": "layout-dashboard",
+  "description": "Turn a spreadsheet, CSV, or dataset into an interactive, filterable dashboard.",
+  "namePlaceholder": "e.g., Q3 Sales Dashboard",
+  "briefPlaceholder": "Describe the data and what you want to see. Paste CSV or table data directly, or point at a file in the workspace...",
+  "promptScaffold": "This job produces a DATA DASHBOARD exhibit.\n- Build an interactive, filterable dashboard from the data the user provided in the brief (pasted CSV, tables, numbers) or from files referenced there.\n- Layout: KPI summary cards on top, charts below (choose chart types that fit the data), and a filter bar (date range, category, text search — whichever apply).\n- All charts and KPIs must recompute live when filters change.\n- Use only the data provided. If the brief includes no usable data, build the full dashboard UI with an obvious paste/import panel and honest empty states — do NOT invent plausible-looking data.\n- Include a small 'Data' view (sortable table) so users can verify the underlying rows.",
+  "source": {
+    "label": "Where is the data?",
+    "options": [
+      {
+        "id": "data-file",
+        "label": "Spreadsheet / CSV file",
+        "kind": "file",
+        "prompt": "The source data is in this local file: {value} — read and parse it."
+      },
+      {
+        "id": "pasted",
+        "label": "Pasted data",
+        "kind": "paste",
+        "placeholder": "Paste CSV or table data here..."
+      },
+      {
+        "id": "web",
+        "label": "Web page",
+        "kind": "url",
+        "placeholder": "https://...",
+        "prompt": "The source data lives at this URL: {value} — fetch it (e.g., with curl) and extract the data."
+      },
+      {
+        "id": "other",
+        "label": "Other",
+        "kind": "instructions"
+      }
+    ]
+  }
+}

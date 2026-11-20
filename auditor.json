@@ -1,0 +1,45 @@
+{
+  "id": "auditor",
+  "version": 2,
+  "name": "Auditor",
+  "icon": "clipboard-check",
+  "description": "A structured, shareable report card — findings, severity, and recommended fixes.",
+  "namePlaceholder": "e.g., Website SEO Audit",
+  "briefPlaceholder": "What should be audited? A codebase, document, website, plan, or process — and what you care about most...",
+  "promptScaffold": "This job produces an ANALYSIS & AUDIT REPORT exhibit — a structured, shareable report card.\n- Audit the subject described in the brief (codebase, document, website, plan, or process).\n- Present findings as cards with: a severity badge (Critical / High / Medium / Low / Info), a one-line title, evidence or reasoning, and a concrete recommended fix.\n- Top of report: an overall grade or score, counts by severity, and a short executive summary.\n- Include severity filtering and a clean print/share-friendly layout.\n- Base every finding on the actual material provided or reachable; if something cannot be verified, mark it 'Needs verification' rather than asserting it.",
+  "source": {
+    "label": "What do you want audited?",
+    "options": [
+      {
+        "id": "codebase",
+        "label": "Codebase",
+        "kind": "folder",
+        "prompt": "The subject to audit is the codebase in this folder: {value} — explore its contents as needed."
+      },
+      {
+        "id": "document",
+        "label": "Document",
+        "kind": "file",
+        "prompt": "The subject to audit is this local document: {value} — read it."
+      },
+      {
+        "id": "website",
+        "label": "Website",
+        "kind": "url",
+        "placeholder": "https://...",
+        "prompt": "The subject to audit is this website: {value} — fetch it (e.g., with curl) and review its content."
+      },
+      {
+        "id": "plan",
+        "label": "Plan",
+        "kind": "file",
+        "prompt": "The subject to audit is the plan in this local file: {value} — read it."
+      },
+      {
+        "id": "other",
+        "label": "Other",
+        "kind": "instructions"
+      }
+    ]
+  }
+}

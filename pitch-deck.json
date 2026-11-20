@@ -1,0 +1,33 @@
+{
+  "id": "pitch-deck",
+  "version": 2,
+  "name": "Pitch Deck",
+  "icon": "presentation",
+  "description": "A navigable slide presentation built from your brief.",
+  "namePlaceholder": "e.g., Series A Deck",
+  "briefPlaceholder": "What's the pitch? Audience, the ask, key proof points, and anything that must be on a slide...",
+  "promptScaffold": "This job produces a PITCH DECK exhibit — a navigable slide presentation.\n- Build 8-14 slides from the brief with a clear narrative arc (problem, solution, proof, ask — adapted to the subject).\n- Navigation: left/right arrow keys, click zones, a slide counter, and an overview/thumbnail mode.\n- Clean, consistent typography and layout; one idea per slide; large readable text, minimal bullets.\n- Use only facts from the brief. Where a number or proof point is missing, insert a clearly marked placeholder like [METRIC NEEDED] instead of inventing one.",
+  "source": {
+    "label": "What is the deck based on?",
+    "options": [
+      {
+        "id": "document",
+        "label": "Document / outline",
+        "kind": "file",
+        "prompt": "Build the deck from this local document: {value} — read it."
+      },
+      {
+        "id": "website",
+        "label": "Website",
+        "kind": "url",
+        "placeholder": "https://...",
+        "prompt": "Build the deck from the content at this URL: {value} — fetch it (e.g., with curl)."
+      },
+      {
+        "id": "other",
+        "label": "Other",
+        "kind": "instructions"
+      }
+    ]
+  }
+}

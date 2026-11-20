@@ -1,0 +1,27 @@
+{
+  "id": "game-maker",
+  "version": 2,
+  "name": "Game Maker",
+  "icon": "gamepad-2",
+  "description": "Describe a game or hand it a design doc, and get a complete, playable game as an exhibit.",
+  "namePlaceholder": "e.g., Neon Asteroid Dodger",
+  "briefPlaceholder": "Describe the game — genre, goal, controls, and look & feel. Or point at a design document and let it build from that...",
+  "promptScaffold": "This job produces a PLAYABLE GAME exhibit.\n- Build a complete, self-contained, playable game from the user's description or referenced game design document.\n- Implement real game logic: clear objective, win/lose conditions, scoring or progression, and responsive controls (keyboard and/or mouse/touch, whichever fits the genre).\n- Include a start screen, an in-game HUD (score, lives, timer — whatever applies), and a game-over / restart flow. Support pause/resume.\n- When a game design document is provided, follow it faithfully — mechanics, rules, theme, and content. Fill small gaps sensibly and list any assumptions in a short 'About' panel.\n- Use canvas or DOM as fits the genre and keep it performant.\n- No external assets or network calls: generate all visuals and audio with shapes, CSS, SVG, canvas, or the Web Audio API so the game runs fully offline.\n- Follow the appended Gauntlet Loop protocol. Do not treat the first playable build as complete.",
+  "promptReference": "gauntlet-loop.md",
+  "source": {
+    "label": "What's the game?",
+    "options": [
+      {
+        "id": "design-doc",
+        "label": "Design document",
+        "kind": "file",
+        "prompt": "The game design is in this local file: {value} — read it and implement the game it describes. It may be .md, .txt, or .docx; for .docx, extract its text first (it is a zipped XML package — read word/document.xml)."
+      },
+      {
+        "id": "describe",
+        "label": "Describe it",
+        "kind": "instructions"
+      }
+    ]
+  }
+}

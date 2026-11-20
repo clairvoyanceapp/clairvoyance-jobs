@@ -1,0 +1,26 @@
+{
+  "id": "setup-new-computer",
+  "version": 2,
+  "name": "Setup New Computer",
+  "workflow": "computer-setup",
+  "icon": "wrench",
+  "description": "Download, install, and verify the software listed in a Markdown setup manifest.",
+  "namePlaceholder": "e.g., Design Workstation",
+  "briefPlaceholder": "",
+  "promptScaffold": "Set up the current computer from the supplied Markdown manifest. Read every requested application, version, component, install location, and configuration note before changing the machine. Download and install the listed software, honor the specified destinations, verify every result, and report anything requiring user approval or manual action.",
+  "source": {
+    "label": "What software should be installed?",
+    "options": [
+      {
+        "id": "document",
+        "label": "Markdown document",
+        "kind": "file",
+        "extensions": [
+          "md",
+          "markdown"
+        ],
+        "prompt": "The computer setup manifest is this Markdown file: {value} — read it and install the listed software at the specified locations."
+      }
+    ]
+  }
+}

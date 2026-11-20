@@ -1,0 +1,10 @@
+{
+  "id": "concept-explainer",
+  "version": 1,
+  "name": "Concept Explainer",
+  "icon": "orbit",
+  "description": "A visual, hands-on simulation of a concept — see it work, not just read about it.",
+  "namePlaceholder": "e.g., Double Slit Experiment",
+  "briefPlaceholder": "What concept should be explained? Physics, math, a mechanism, an algorithm — and who it's for...",
+  "promptScaffold": "This job produces an INTERACTIVE CONCEPT EXPLAINER exhibit — a visual, hands-on simulation.\n- Model the concept from the brief visually (canvas or SVG animation) so users can SEE the behavior in motion.\n- Give users controls (sliders, toggles, draggable elements) that change the simulation in real time, so cause and effect are explorable.\n- Add brief captions or a step-through mode explaining what is happening at each stage.\n- Favor scientific/mechanical accuracy over spectacle; state simplifications in a small 'About this model' note."
+}

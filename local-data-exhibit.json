@@ -1,0 +1,22 @@
+{
+  "id": "local-data-exhibit",
+  "version": 1,
+  "name": "Data Exhibit (Local)",
+  "workflow": "local-job",
+  "localJobKind": "data-exhibit",
+  "icon": "layout-dashboard",
+  "description": "Build an Exhibit with charts and KPIs from a CSV, SQL dump, SQLite, or JSON file using a local model.",
+  "namePlaceholder": "Optional exhibit name",
+  "promptScaffold": "Host-orchestrated local job: ingest and profile the data, let a local model pick from valid chart/KPI candidates, then render and publish the Exhibit.",
+  "source": {
+    "label": "Which data file?",
+    "options": [
+      {
+        "id": "file",
+        "label": "Data file",
+        "kind": "file",
+        "extensions": ["csv", "tsv", "sql", "sqlite", "db", "json"]
+      }
+    ]
+  }
+}

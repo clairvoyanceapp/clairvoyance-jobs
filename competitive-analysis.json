@@ -1,0 +1,33 @@
+{
+  "id": "competitive-analysis",
+  "version": 2,
+  "name": "Competitive Analysis",
+  "icon": "scale",
+  "description": "Options or competitors scored side by side, with positioning and talk tracks.",
+  "namePlaceholder": "e.g., CRM Vendor Comparison",
+  "briefPlaceholder": "Which options or competitors should be compared, and on what criteria? Include anything you already know about them...",
+  "promptScaffold": "This job produces a COMPETITIVE ANALYSIS exhibit.\n- Compare the options or competitors named in the brief side by side: a comparison matrix of criteria vs. options, with scores and short justifications per cell.\n- Support weighted scoring: let the user adjust criterion weights and watch rankings update live.\n- Include a positioning summary per option (strengths, weaknesses, best-fit customer) and suggested talk tracks or counterpoints.\n- Ground every claim in the brief or well-known public information; flag uncertain claims explicitly rather than fabricating specifics.",
+  "source": {
+    "label": "What is the source material?",
+    "options": [
+      {
+        "id": "document",
+        "label": "Document",
+        "kind": "file",
+        "prompt": "The source material is this local document: {value} — read it."
+      },
+      {
+        "id": "website",
+        "label": "Competitor website",
+        "kind": "url",
+        "placeholder": "https://...",
+        "prompt": "A competitor website to analyze: {value} — fetch it (e.g., with curl) and review its content."
+      },
+      {
+        "id": "other",
+        "label": "Other",
+        "kind": "instructions"
+      }
+    ]
+  }
+}

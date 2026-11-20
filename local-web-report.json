@@ -1,0 +1,27 @@
+{
+  "id": "local-web-report",
+  "version": 1,
+  "name": "Web Report (Local)",
+  "workflow": "local-job",
+  "localJobKind": "web-report",
+  "icon": "globe",
+  "description": "Turn a web page or a saved page/file into a structured Report using a local model.",
+  "namePlaceholder": "Optional report title",
+  "promptScaffold": "Host-orchestrated local job: read the page, extract key points and facts per section with a local model, outline, and write a Report.",
+  "source": {
+    "label": "What should the report cover?",
+    "options": [
+      {
+        "id": "url",
+        "label": "Web page",
+        "kind": "url",
+        "placeholder": "https://..."
+      },
+      {
+        "id": "file",
+        "label": "Saved page or file",
+        "kind": "file"
+      }
+    ]
+  }
+}

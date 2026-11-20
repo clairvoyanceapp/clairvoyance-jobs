@@ -1,0 +1,28 @@
+{
+  "id": "translate",
+  "version": 1,
+  "name": "Translate",
+  "workflow": "translation",
+  "icon": "languages",
+  "description": "Translate files into one or more languages while preserving structure, formatting, and localization tokens.",
+  "namePlaceholder": "e.g., Product Help Localization",
+  "briefPlaceholder": "Add terminology, tone, audience, do-not-translate terms, locale conventions, or other localization guidance...",
+  "promptScaffold": "This job performs production-quality FILE LOCALIZATION. It produces translated files in locale-code folders, not an Exhibit.\n- Read every selected source file and translate user-facing content into each requested target locale.\n- Write each locale beneath the chosen destination as <locale-code>/<original-relative-path> (for example, es-ES/help/getting-started.md). Preserve the source folder hierarchy and filenames unless the user explicitly requests localized filenames.\n- Preserve the source file format, encoding where practical, Markdown/HTML structure, frontmatter keys, JSON/YAML/XML keys, code, URLs, placeholders, interpolation tokens, ICU MessageFormat syntax, product names, and other non-translatable identifiers. Translate only human-facing text.\n- Use natural, locale-appropriate wording rather than literal substitution. Follow the user's terminology, tone, audience, do-not-translate list, and regional conventions.\n- Keep repeated terms consistent across files and locales. When a term is genuinely ambiguous, choose the safest context-supported translation and flag it in the completion summary instead of inventing context.\n- Never overwrite source files. Respect the selected existing-file policy for destination conflicts.\n- Validate each output for parseable structure where the format permits, intact tokens/placeholders, and complete coverage before reporting completion.\n- Report the files and locales produced, skipped files, validation performed, and any ambiguities requiring review.",
+  "source": {
+    "label": "What should be translated?",
+    "options": [
+      {
+        "id": "files",
+        "label": "Files",
+        "kind": "file",
+        "prompt": "Translate the selected local files: {value}"
+      },
+      {
+        "id": "folder",
+        "label": "Folder",
+        "kind": "folder",
+        "prompt": "Translate the local files under this source folder while preserving relative paths: {value}"
+      }
+    ]
+  }
+}

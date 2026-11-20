@@ -1,0 +1,32 @@
+{
+  "id": "what-if-model",
+  "version": 2,
+  "name": "What-If Model",
+  "icon": "sliders-horizontal",
+  "description": "A live calculator where changing the inputs instantly recomputes the outputs.",
+  "namePlaceholder": "e.g., Staffing & Runway Model",
+  "briefPlaceholder": "What should the model calculate? Describe the inputs, outputs, and any formulas or rules...",
+  "promptScaffold": "This job produces an INTERACTIVE WHAT-IF MODEL exhibit — a live calculator.\n- Identify the inputs and outputs implied by the brief. Inputs get sliders, number fields, or dropdowns with sensible defaults and ranges; outputs recompute instantly on any change.\n- Show the key outputs prominently (big numbers), with supporting charts where useful (e.g., a projection over time).\n- Document assumptions and formulas in a collapsible 'Assumptions' section so results are auditable.\n- Include a 'Reset to defaults' control and, where meaningful, 2-3 named preset scenarios (clearly labeled as presets, not real data).",
+  "source": {
+    "label": "What is the model based on?",
+    "options": [
+      {
+        "id": "spreadsheet",
+        "label": "Spreadsheet / data file",
+        "kind": "file",
+        "prompt": "Base the model on this local file: {value} — read it and derive the inputs, formulas, and outputs from it."
+      },
+      {
+        "id": "document",
+        "label": "Document",
+        "kind": "file",
+        "prompt": "Base the model on this local document: {value} — read it and derive the inputs, formulas, and outputs from it."
+      },
+      {
+        "id": "other",
+        "label": "Instructions",
+        "kind": "instructions"
+      }
+    ]
+  }
+}

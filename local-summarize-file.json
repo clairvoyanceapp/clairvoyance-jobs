@@ -1,0 +1,21 @@
+{
+  "id": "local-summarize-file",
+  "version": 1,
+  "name": "Summarize File (Local)",
+  "workflow": "local-job",
+  "localJobKind": "summarize-file",
+  "icon": "file-text",
+  "description": "Summarize a long file into a Report using a local model — the host chunks the file and asks the model small questions.",
+  "namePlaceholder": "Optional report title",
+  "promptScaffold": "Host-orchestrated local job: chunk the file, collect key points per chunk with a local model, reduce them into a titled Report.",
+  "source": {
+    "label": "Which file should be summarized?",
+    "options": [
+      {
+        "id": "file",
+        "label": "File",
+        "kind": "file"
+      }
+    ]
+  }
+}

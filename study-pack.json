@@ -1,0 +1,39 @@
+{
+  "id": "study-pack",
+  "version": 2,
+  "name": "Study Pack",
+  "icon": "graduation-cap",
+  "description": "Flashcards, quizzes, and matching games generated from any source material.",
+  "namePlaceholder": "e.g., Chemistry Ch. 12-14",
+  "briefPlaceholder": "Paste or describe the material to study — notes, a chapter, vocabulary, key concepts...",
+  "promptScaffold": "This job produces a STUDY & QUIZ PACK exhibit from the source material in the brief.\n- Include three modes: flashcards (flip to reveal, shuffle, mark known/unknown), a multiple-choice quiz with instant feedback and a final score, and a matching game where the material suits it.\n- Derive every card and question strictly from the provided material — do not import outside facts unless the brief asks for them.\n- Track progress locally within the session (score, cards mastered) and let the user restart any mode.\n- Keep the tone friendly and encouraging; show explanations for wrong answers.",
+  "source": {
+    "label": "What is the study material?",
+    "options": [
+      {
+        "id": "document",
+        "label": "Document",
+        "kind": "file",
+        "prompt": "The study material is this local file: {value} — read it and derive all cards and questions from it."
+      },
+      {
+        "id": "pasted",
+        "label": "Pasted text",
+        "kind": "paste",
+        "placeholder": "Paste the notes, chapter, or vocabulary here..."
+      },
+      {
+        "id": "web",
+        "label": "Web page",
+        "kind": "url",
+        "placeholder": "https://...",
+        "prompt": "The study material is at this URL: {value} — fetch it (e.g., with curl) and derive all cards and questions from it."
+      },
+      {
+        "id": "other",
+        "label": "Other",
+        "kind": "instructions"
+      }
+    ]
+  }
+}
